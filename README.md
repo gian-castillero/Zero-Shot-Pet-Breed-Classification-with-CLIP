@@ -1,12 +1,12 @@
 # Zero-Shot Pet Breed Classification with CLIP
 
-Applying OpenAI's CLIP multimodal vision-language model for zero-shot pet breed classification, with prompt engineering to push accuracy above 87% — no fine-tuning required.
+Applying OpenAI's CLIP multimodal vision-language model for zero-shot pet breed classification, with prompt engineering to push accuracy above 87%; no fine-tuning required.
 
 ## Overview
 
-This project uses OpenAI's CLIP (`clip-vit-base-patch32`) — a multimodal transformer trained to align image and text representations in a shared embedding space — to classify 37 breeds of cats and dogs from the Oxford-IIIT Pet dataset. Unlike a CNN trained specifically on this task, CLIP performs **zero-shot classification**: it is never fine-tuned on the pet dataset at all. Instead, classification is done by comparing an image's embedding against text embeddings of candidate class descriptions and selecting the closest match.
+This project uses OpenAI's CLIP (`clip-vit-base-patch32`), a multimodal transformer trained to align image and text representations in a shared embedding space, to classify 37 breeds of cats and dogs from the Oxford-IIIT Pet dataset. Unlike a CNN trained specifically on this task, CLIP performs **zero-shot classification**: it is never fine-tuned on the pet dataset at all. Instead, classification is done by comparing an image's embedding against text embeddings of candidate class descriptions and selecting the closest match.
 
-The project then explores **prompt engineering** — modifying the text inputs without changing the model — to improve classification accuracy from ~80% to above 87%.
+The project then explores **prompt engineering**, modifying the text inputs without changing the model, to improve classification accuracy from ~80% to above 87%.
 
 ## Model
 
@@ -42,7 +42,7 @@ This additional context helps CLIP disambiguate ambiguous breed names and levera
 
 A CNN trained on this dataset would be limited to the 37 breeds it was trained on. CLIP offers three qualitative advantages:
 
-1. **Open vocabulary:** Any text string is a valid class label — no retraining for new categories
+1. **Open vocabulary:** Any text string is a valid class label; no retraining for new categories
 2. **Multimodal understanding:** Predicts from arbitrary natural language descriptions rather than fixed integer labels
 3. **Prompt-improvable:** Performance can be increased through better text formulation without touching model weights
 
